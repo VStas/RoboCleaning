@@ -1,9 +1,23 @@
+'use strict';
+
+//
+// Use grid system, but make smooth animations between cells.
+// Implement batteries and charging stations.
+//
+
+// import ROOM_WIDTH, ROOM_HEIGHT
+
 const draw = () => {
   const canvas = document.getElementById('canvas');
 
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = 'rgb(200,0,0)';
-  ctx.fillRect(10, 10, 55, 50);
+  const context = canvas.getContext('2d');
+  drawRoom(context);
+};
+
+const drawRoom = (context) => {
+  context.rect(10, 10, 10 + ROOM_WIDTH, 10 + ROOM_HEIGHT);
+  context.lineWidth = 1;
+  context.stroke();
 };
 
 const ready = () => {
